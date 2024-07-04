@@ -41,7 +41,7 @@ jobs:
    
     - name: Terraform Apply
       run: terraform apply --auto-approve
-- name: Export terraform outputs
+    - name: Export terraform outputs
       id: tfout
       run: |
         echo "EB_APP=$(terraform output -raw app_name)" >> $GITHUB_OUTPUT
